@@ -1,0 +1,8 @@
+{
+  "name": "Interestingness",
+  "description": "A tool for sharing links",
+  "image": "heroku/python",
+  "repository": "https://github.com/harvard-lil/interestingness",
+  "keywords": ["python", "django" ],
+  "addons": [ "heroku-postgresql" ]
+}

@@ -1,0 +1,48 @@
+[
+{
+    "pk": 1, 
+    "model": "items.contributor", 
+    "fields": {
+        "organization": 1, 
+        "key": "4a896364-b261-4237-bd99-ed7c12856e61", 
+        "email": "contributor@example.com",
+        "display_name": "A contributor",
+        "is_active": true
+    }
+},
+{
+    "pk": 1, 
+    "model": "items.item", 
+    "fields": {
+        "contributor": 1,
+        "description": "this is an interesting link",
+        "link": "http://example.com/something",
+        "short_link": "example.com",
+        "contributed_date": "2014-10-31T17:51:44Z"
+    }
+},
+{
+    "pk": 1, 
+    "model": "items.interuser", 
+    "fields": {
+        "first_name": "", 
+        "last_name": "", 
+        "is_active": true, 
+        "last_login": "2014-10-31T17:40:49Z", 
+        "password": "pbkdf2_sha256$12000$L0hJeMn2gAGP$eV+Nm8DaRsvLmzW+UzfRASVZmELphf0+JwN9w9kXBL4=", 
+        "email": "test_user@example.com", 
+        "date_joined": "2014-10-31T17:40:49Z"
+    }
+},
+{
+    "pk": 1, 
+    "model": "items.organization", 
+    "fields": {
+        "public_link": "http://example.com", 
+        "slug": "test-org", 
+        "user": 1, 
+        "public_email": "org@example.com", 
+        "name": "Test Org"
+    }
+}
+]

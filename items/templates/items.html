@@ -1,0 +1,50 @@
+{% extends "layouts/base.html" %}
+{% load static from staticfiles %}
+{% load compress %}
+
+{% block styles %}
+{% endblock styles %}
+
+
+{% block title %}Items{% endblock title %}
+
+{% block content %}
+	<div class="container items-page">
+		<div class="row">
+			<div class="post-padding">
+				<div class="skew">	
+					<h1>ITEMS</h1>
+				</div>
+			</div>
+		</div>
+		<div class="item-row-container">
+		</div>
+    </div> <!-- container -->
+{% endblock content %}
+
+{% block scripts %}
+	<script src="{% static 'js/handlebars-v2.0.0.js' %}"></script>
+	<script>
+		var org_slug = '{{org_slug}}';
+		var settings = {'url': '/api/v0.2/item/search/?q=' + org_slug};
+	</script>
+	<script src="{% static 'js/item.js' %} "></script>
+	
+	<script id="item-template" type="text/x-handlebars-template">
+	{% verbatim %}
+		{{#each item}}
+			<div class="row">
+				<div class="two columns post-padding">
+					<div class="crop-mug">
+						<img src="{{profile_pic}}" class="rounded" />
+					</div>
+				</div>
+				<div class="ten columns post-padding">
+					<h4>{{description}}<span class="posted-by">{{contributor}}</span></h4>
+					<p class="source"><a href="{{link}}">{{short_link}}</a></p>
+				</div>
+			</div> <!-- row -->
+		{{/each}}	
+	</script>
+	{% endverbatim %}
+{% endblock scripts %}

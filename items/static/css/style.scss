@@ -1,0 +1,766 @@
+$heading_font : 'Montserrat', sans-serif;
+$body_font : 'Lato', sans-serif;
+
+$background_gray : #fdfdfc;
+$light-cyan : #eaf5fc;
+$cyan : #54ace8;
+$red : #ef524b;
+$pink : #f49deb;
+$dark_gray : #94a5ca;
+$green : #58c361;
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $heading_font;
+    color: #555;
+    text-transform:uppercase;
+}
+
+body {
+    color:#666;
+    font-family: $body_font;
+    font-size:18px;
+}
+
+.navbar-collapse, .navbar-default {
+	background-color: #fff;
+	border-color: #fff;
+	box-shadow: none;
+}
+
+.btn-primary {
+	margin-top: 9px;
+	border-radius: 1px;
+	border-color: $cyan;
+	color: #666;
+	background-color: #fff;
+}
+
+.nav .btn:hover {
+	background-color: $light-cyan;
+	color: #666;
+	border-color: $cyan;
+}
+
+.nav a {
+	margin-top: 16px;
+}
+
+.nav a.btn {
+	margin-top: 20px;
+	margin-right: 10px;
+	padding: 10px;
+	padding-left: 25px;
+	padding-right: 25px;
+	font-size: 18px;
+}
+
+
+/* ########################## */
+/* # Landing page             */
+/* ########################## */
+
+
+
+/* @import 'landing'; */
+
+/* our dividing stripes */
+
+.landing .dividing-stripe {
+	background-color: $green;
+}
+
+.landing .dividing-stripe .row {
+	margin: 0;
+	padding: 7px 0;
+	margin-left: -15px; /* A kludgy way to remove our nexted boostrap padding */
+}
+
+.landing .dividing-stripe .row p {
+	font-size: 35px;
+	color: #fff;
+	margin: 0;
+}
+
+
+.landing .zebra-stripe {
+	background-color: $background_gray;
+}
+
+#steps-image {
+	/* TODO: resize this image to 230px */
+}
+
+#steps-desc {
+	font-size: 50px;
+	margin-top: 0px;
+	text-align: center;
+	color: #777;
+	margin-bottom: -5px;
+	font-weight: 300;
+}
+
+.step-title {
+	font-size: 34px;
+	color: $cyan;
+	margin-right: 10px;
+	font-weight: 300;
+}
+
+.step-body {
+	color: #555;
+	margin-top: 20px;
+	font-weight: 300;
+	font-size: 21px;
+}
+
+.desc-title {
+	font-size: 47px;
+	line-height: 46px;
+	color: $cyan;
+	margin-bottom: 2px;
+	font-weight: 300;
+}
+
+.landing li {
+	list-style: none;
+}
+
+.landing #try-button {
+	padding: 8px 34px;
+	font-size: 24px;
+	margin-top: 40px;
+	width: 250px;
+}
+
+/* ########################## */
+/* # / Landing page           */
+/* ########################## */
+
+
+/* ########################## */
+/* # Items page             */
+/* ########################## */
+
+
+
+/* @import 'landing'; */
+
+/* our dividing stripes */
+
+
+.items .single-item-container {
+	margin-bottom: 15px;
+	background-color: $background_gray;
+}
+
+
+/* ########################## */
+/* # / Items page             */
+/* ########################## */
+
+
+/* ########################## */
+/* # Collaborator page        */
+/* ########################## */
+
+.collaborator {
+
+	max-width: 500px;
+
+	img {
+		width: 150px;
+		height: 150px;
+		border-radius: 50%;
+		display: block;
+    	margin: auto;
+		cursor: pointer;
+	}
+
+	label.upload-label {
+		width: 100%;
+	}
+
+	label.upload-label input[type="file"] {
+	    position: fixed;
+	    top: -1000px;
+	}
+
+	.upload-pic-button {
+		border-radius: 2px;
+		display: block;
+		width: 100%;
+		margin: 55px auto 0 auto;
+		padding: 5px 13px;
+		border: 1px solid #54ace8;;
+		cursor: pointer;
+    	font-weight: 400;
+    	text-align: center;
+	}
+
+	input {
+		margin: 10px 0;
+		width: 100%;
+		border: 1px solid #ccc;
+		border-radius: 2px;
+		padding: 5px 13px;
+	}
+
+	input[type="submit"] {
+		border: 1px solid #54ace8;
+		background-color: #fff;
+		border-radius: 2px;
+	}
+
+	.field-label {
+		float: right;
+	}
+
+	.pic-status, .name-status {
+		display: none;
+		color: #54ace8;
+		text-align: center;
+    	font-size: 15px;
+	}
+
+	.name-email-row, picture-row {
+		margin-top: 50px;
+	}
+
+	.picture-row {
+		margin-top: 50px;
+	}
+
+	.title {
+		text-align: center;
+		margin-top: 20px;
+		font-size: 37px;
+		color: #555;
+	}
+
+	.intro-text {
+		text-align: center;
+		font-size: 14px;
+	}
+
+	.bookmarklet-install-button {
+		display: none;
+		margin-top: 50px;
+	}
+}
+
+/* ########################## */
+/* # / Collaborator page      */
+/* ########################## */
+
+
+
+/* ########################## */
+/* # Media queries            */
+/* ########################## */
+
+
+/* Custom, iPhone Retina */ 
+@media only screen and (min-width : 320px) {
+	
+	#logo {
+		margin-top: 40px;
+	}
+	
+	
+	#tagline {
+		font-size: 47px;
+		line-height: 56px;
+		max-width: 750px;
+		margin-top: 40px;
+		margin-bottom: 110px;
+		font-weight: 300;
+		color: #666;
+	}
+	
+	.landing .zebra-stripe {
+		padding-top: 80px;
+		padding-bottom: 80px;
+	}
+
+	.need-it  {
+		padding-top: 40px;
+		padding-bottom: 20px;
+	}
+
+	.need-it  .row {
+		padding-top: 50px;
+		padding-bottom: 50px;
+	}
+
+	.need-it .paperplanes {
+		margin-top: -20px;
+	}
+
+	.need-it .controls {
+		margin-left: 60px;
+	}
+
+	.need-it .controls-img {
+		margin-top: -10px;
+	}
+
+	.need-it .picnic {
+		margin-top: 25px;
+	}
+
+
+}
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (min-width : 480px) {
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+	
+    .container {
+		width: 970px;
+		}
+}
+
+/* ########################## */
+/* # / Media queries          */
+/* ########################## */
+
+
+
+/* ########################## */
+/* # API docs                 */
+/* ########################## */
+
+
+.docs.api .api-warning {
+	border: 1px #FF3535 solid;
+	background-color: #FF3535;
+	padding: 15px 15px 0 15px;
+	margin-top: 30px;
+}
+
+.docs.api .api-warning p {
+	font-weight: 300;
+	color: #fff;
+	font-size: 22px;
+	display: inline;
+	vertical-align: top;
+}
+
+.docs.api span {
+	margin-right: 15px;
+	font-size: 30px;
+	color: #fff;
+	margin-bottom: 15px;
+}
+
+.docs.api glyphicon {
+	margin-top: 5px;
+}
+
+pre {
+	margin-top: 15px;
+	margin-bottom: 15px;
+	background-color: #fafafb;
+	border-color: #ddd;
+	color: #444;
+	margin-left: 0;
+}
+
+
+/* ########################## */
+/* # / API docs               */
+/* ########################## */
+
+
+
+
+/* ########################## */
+/* # Add item tray            */
+/* ########################## */
+
+.add-item-tray {
+	padding-top:35px;
+}
+
+.add-item-tray textarea {
+    font-size: 1.9rem;
+    line-height: 1.4;
+    letter-spacing: 0;
+    font-style: italic;
+    font-weight: 300;
+    width:520px;
+    height:38px;
+    padding:6px 10px;
+}
+
+.add-item-tray .btn {
+	margin-top:0px;
+}
+
+/* ########################## */
+/* # Old Stuff                */
+/* ########################## */
+
+
+
+
+/* Dashboard */
+
+.dashboard-row {
+    margin-top:35px;
+    margin-bottom:35px;
+}
+
+.dashboard-invite-new {
+    position:relative;
+    top:-5px;
+    text-transform:none;
+}
+
+.contributors-list {
+    border-bottom:1px solid #e89625;
+    margin-bottom:25px;
+}
+
+.count-label, .listed-contributor-items span {
+    font-size:14px;
+    margin-bottom:0px;
+    margin-top:0px;
+    color:#888;
+    font-weight:400;
+}
+
+.count-number {
+    font-size:48px;
+    font-weight:500;
+    line-height:1.1em;
+    color: #555;
+}
+
+.listed-contributor {
+    border-top:1px solid #e89625;
+    background-color:#fffff7;
+}
+
+.listed-contributor-email {
+    padding-top:15px;
+    padding-bottom:15px;
+    height:75px;
+}
+
+.listed-contributor-items {
+    font-size:32px;
+    padding-top:10px;
+    padding-bottom:15px;
+} 
+
+.listed-contributor-items span {
+    margin-left: 5px;
+    display:inline-block;
+}
+
+.listed-contributor-active {
+    font-size:14px;
+    padding-top:30px;
+    color:#888;
+}
+
+.listed-contributor-email button {
+    display:none;
+    margin-top:4px;
+}
+
+.listed-contributor:hover small {
+    display:none;
+}
+
+.listed-contributor small {
+    display:block;
+}
+
+.listed-contributor:hover button {
+    display:block;
+}
+
+/* Dashboard end */
+
+/* Add item start */
+#gallery-container {
+    height: 250px;
+    padding: 10px 0;
+}
+
+#gallery-container img {
+    max-height: 200px;
+    margin-right:20px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+}
+
+#gallery-container .selected-image {
+    border-bottom: 8px solid #dddbff;
+    cursor: default;
+}
+
+#gallery-container .selectable-image {
+    border-bottom: 8px solid #ddd;
+}
+
+#gallery-container .selectable-image:hover {
+    border-bottom: 8px solid #b9e3ff;
+}
+
+#gallery-container #image-placeholder {
+    height: 200px;
+    width: 200px;
+    border: solid #bbb 1px;
+}
+
+#gallery-container #image-placeholder p{
+    font-size: 13px;
+}
+
+#gallery-container #image-placeholder img{
+    margin: 80px 85px;
+    border: none;
+    cursor: default;
+}
+
+/* Add item end */
+
+
+/* ########################## */
+/* # / Old Stuff              */
+/* ########################## */
+
+
+
+
+
+
+/* ########################## */
+/* # Jeff stuff               */
+/* ########################## */
+
+/*testing testing, 1 2 3*/
+
+.tray {
+background-color:#fff;
+background-image: radial-gradient($light-cyan 21%, transparent 26%),
+radial-gradient($light-cyan 21%, transparent 26%);
+background-size:30px 30px;
+background-position: 0 0, 15px 15px;
+}
+
+.tray #signal-success {
+	margin-left:0px;
+	font-size:1.5rem;
+	padding:7px 0px 4px 0px;
+	color:$green;
+	font-weight:bold;
+	text-align:center;
+	text-shadow:
+   -1px -1px 0 #fff,  
+    1px -1px 0 #fff,
+    -1px 1px 0 #fff,
+     1px 1px 0 #fff;
+}
+
+.items-page, .tray {
+	.post-padding {
+		margin-bottom:20px;
+	}
+
+	.crop-mug {
+	    width: 65px;
+	    height: 65px;
+	    position: relative;
+	    overflow: hidden;
+	    -webkit-border-radius: 50%;
+	    -moz-border-radius: 50%;
+	    -ms-border-radius: 50%;
+	    -o-border-radius: 50%;
+	    border-radius: 50%;
+	}
+	img {
+	    display: inline;
+	    margin: 0 auto;
+	    height: 100%;
+	    width: auto;
+	}
+
+	h4 {
+		font-size: 1.9rem; 
+		line-height: 1.4;  
+		letter-spacing: 0;
+		font-style: italic;
+		margin-top:-5px;
+	}
+
+	p.source, p.source a {
+		margin-top:-15px;
+		font-size: 1.2rem; 
+		color: black;
+		/*/border:1px dashed #ccc;/*/
+		opacity:50%;
+		text-decoration:none;	
+	}
+
+	p.tray-source {
+		padding:4px 0px 4px 10px;
+		background-color: #fff;
+	}
+
+	textarea, 
+	#description,
+	.button.button-primary, 
+	button.button-primary, 
+	input[type="submit"].button-primary, 
+	input[type="reset"].button-primary, 
+	input[type="button"].button-primary  {
+		border-color:white;
+		border-radius: 0px;	
+		color: #000;
+  		background-color: #fff;
+	}
+
+	textarea, #description {
+		font-size: 1.9rem; 
+		line-height: 1.4;  
+		letter-spacing: 0;
+		font-style: italic;
+		font-weight: 300;
+		min-height: 35px;
+		margin-top:0px;
+	}
+
+	input[type="submit"].button-primary {	
+		font-family: 'Open Sans Condensed';
+		font-size:12px;
+		margin-bottom:0px;
+	}
+
+	.shadow {
+		-webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+		-moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+		-ms-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+		-o-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+		box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+	}
+
+	.text-background {
+		background-color:#fff;
+		padding:0px 4px 4px 6px;
+		width: 76px;
+		height: 24px;
+		margin:5px 0px 0px -11px;
+		font-family: 'Open Sans Condensed';
+	}
+
+	input {
+		margin-top:5px;
+	}
+
+	.label-body {
+	  display: inline-block;
+	  font-weight: normal; 
+	  font-size: 11px; 
+	 }
+	 
+	.posted-by {
+		font-size: 1.2rem; 
+		font-weight:bold;
+		padding-left:5px;
+		font-family: 'Open Sans Condensed';
+		text-transform: uppercase;
+	}
+	 
+	.tray {
+		 /*/background-image: url(images/polka-dot-red.gif); /*/
+		 background-image: url('../images/polka-dot.png');
+		 margin-bottom:20px; 
+	}
+
+	.tray-row-correction {
+		margin-bottom: -15px;
+	}
+
+	.column-adjustment {
+		margin-left:20px;
+	}
+	h1{
+		/*/background: linear-gradient(180deg, #e05252 0%, #99e052 25%, #52e0e0 50%, #9952e0 75%, #e05252 100%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;/*/
+		 background-color: #33C3F0;
+		 color:white;
+		font-weight: bold;
+		padding:3px 30px 4px 14px;
+		text-align: left;
+		font-family: 'Open Sans Condensed'
+	}
+
+	.skew {
+		-webkit-transform: skew(-20deg);
+		   -moz-transform: skew(-20deg);
+		   -ms-transform: skew(-20deg);
+		   	-o-transform: skew(-20deg);
+		   		transform: skew(-20deg);
+
+	}
+
+	::-webkit-input-placeholder {
+		font-size: 1.9rem; 
+		line-height: 1.4;  
+		letter-spacing: 0;
+		font-style: italic;
+		color: #b3b3b3;
+		font-weight: 300;
+		
+
+	}
+	:-moz-placeholder { /* older Firefox*/
+		font-size: 1.9rem; 
+		line-height: 1.4;  
+		letter-spacing: 0;
+		font-style: italic;
+		color: #ccc;
+		font-weight: 300;
+
+	}
+	::-moz-placeholder { /* Firefox 19+ */ 
+		font-size: 1.9rem; 
+		line-height: 1.4;  
+		letter-spacing: 0;
+		font-style: italic;
+		color: #ccc;
+		font-weight: 300;
+
+	} 
+	:-ms-input-placeholder { 
+		font-size: 1.9rem; 
+		line-height: 1.4;  
+		letter-spacing: 0;
+		font-style: italic;
+		color: #ccc;
+		font-weight: 300;
+	}
+}
+
+/* ########################## */
+/* # / Jeff stuff             */
+/* ########################## */

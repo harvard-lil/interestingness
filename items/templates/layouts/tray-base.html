@@ -1,0 +1,49 @@
+{% load static compressed %}
+{% get_static_prefix as STATIC_PREFIX %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="{{ STATIC_PREFIX }}img/favicon.png">
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+
+    <title>{% block title %}Signal Back{% endblock title %}</title>
+
+	{% compressed_css 'common' %}
+	
+	{% block styles %}
+	<style>
+		body {
+			/*background-color:#fff;*/
+			background-color:#fff;
+			background-image: radial-gradient(black 15%, transparent 16%),
+			radial-gradient(black 15%, transparent 16%);
+			background-size:50px 50px;
+			background-position: 0 0, 25px 25px;
+		}
+
+</style>
+	{% endblock styles %}
+		
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+	
+    {% block content %}{% endblock content %}
+    
+    <script src="{{ STATIC_PREFIX }}js/jquery-1.11.1.min.js"></script>
+    {% block scripts %}{% endblock scripts %}
+  </body>
+</html>
