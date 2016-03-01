@@ -1,16 +1,14 @@
 {% extends "layouts/base.html" %}
 
+{% block title %}Success{% endblock title %}
+
 {% block content %}
 <div class="container">
-	<div class="row">
-		<div class="col-sm-12">	
-			<h2>You have been logged out.</h2>
-		
+  <div class="row">
+    <div class="twelve columns">
+      <h2>You have been logged out.</h2>
 			<p>Logged out a bit too soon? No worries, <a href="{% url 'auth_login' %}">sign back in</a>.</p>
-		</div>
-	</div>
-</div>
-<br />
-<br />
-<br />
+    </div>
+  </div> <!-- row -->
+</div> <!-- container -->
 {% endblock content %}

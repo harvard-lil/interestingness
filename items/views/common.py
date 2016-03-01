@@ -37,7 +37,7 @@ def landing(request):
     
 @xframe_options_exempt
 def add_item(request):
-
+    """what does this do? serves up the markup that gets iframed into our tray?"""
     bookmarklet_key_id = request.GET.get('bookmarklet_key', '')
     try:
         bookmarklet_key = Contributor.objects.get(key=bookmarklet_key_id)
@@ -56,10 +56,10 @@ def add_item(request):
     context = RequestContext(request, context)
     
     return render_to_response('add_item.html', context)
-        
+
 
 def add_item_service(request):
-    """Item submitted"""
+    """Our bookmarklet posts to here"""
     
     bookmarklet_key_id = request.POST['bookmarklet_key']
     try:
@@ -82,8 +82,10 @@ def add_item_service(request):
     
     return HttpResponse('success', status=200)
         
-        
 def collaborator(request, bookmarklet_key_id):
+    """An invited collaborator arrives here to complete
+       account setup and install the bookmarklet
+    """
 
     try:
         bookmarklet_key = Contributor.objects.get(key=bookmarklet_key_id)
@@ -119,16 +121,3 @@ def collaborator(request, bookmarklet_key_id):
     context = RequestContext(request, context)
     
     return render_to_response('collaborator.html', context)
-
-def collaborator_confirm(request, bookmarklet_key_id):
-    # Display the bookmarklet 
-
-    context = {'bookmarklet_key': bookmarklet_key_id}
-    return render_to_response('collaborator-confirm.html', context)
-
-def bookmarklet(request, bookmarklet_key):
-    """The bookmarklet"""
-        
-    bookmarklet_domain = get_current_site(request).domain
-
-    return render_to_response('bookmarklet.js', {'bookmarklet_domain': bookmarklet_domain, 'bookmarklet_key': bookmarklet_key}, content_type='text/javascript')

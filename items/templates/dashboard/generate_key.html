@@ -1,34 +1,44 @@
 {% extends "layouts/base.html" %}
-{% load static %}
-{% get_static_prefix as STATIC_PREFIX %}
+{% load static from staticfiles %}
 
 {% block title %}Invite a contributor{% endblock title %}
 
 {% block content %}
 
+<div class="container">
+  <div class="row">
+    <div class="twelve columns">
+      <h1>Invite a contributor</h1>
+      <p>The more the merrier!</p>
+      <p>This will allow a new user to contribute to your organization's stream.</p>
+      <form action="" method="POST" class="" role="form">
+        {% csrf_token %}
+        <div class="form-group">
+          <label class="" for="invite_email">Email</label>
+          <input type="text" class="form-control" id="invite_email" name="invite_email" placeholder="Enter email address">
+        </div>
+        <button type="submit" class="button">Send</button>
+      </form>
+      {% if bookmarkletLink %}
+        <p>An invite has been sent with this installation link!</p>
+        <p><a href="{{bookmarkletLink}}">{{bookmarkletLink}}</a></p>
+      {% endif %}
+    </div>
+  </div> <!-- row -->
+</div> <!-- container -->
+
+
+
     <div class="container">
-        <h1>Invite a contributor</h1>
+        
         <div class="row">
             <div class="col-md-8">
-                <p>The more the merrier!</p>
-                <p>This will allow a new user to contribute to your organization's stream.</p>
-                <form action="" method="POST" class="form-inline form-pull-down" role="form">
-                    {% csrf_token %}
-                  <div class="form-group">
-                    <label class="sr-only" for="invite_email">Email</label>
-                    <input type="text" class="form-control" id="invite_email" name="invite_email" placeholder="Enter email address">
-                  </div>
-                  <button type="submit" class="btn btn-success">Send</button>
-                </form>
+                
             </div>
         </div>
         <div class="row">
             <div class="col-md-8">
-                {% if bookmarkletLink %}
-                    <br><br>
-                    <p>An invite has been sent with this installation link!</p>
-                    <p><a href="{{bookmarkletLink}}">{{bookmarkletLink}}</a></p>
-                {% endif %}
+                
             </div>
         </div>
 

@@ -41,7 +41,7 @@ def landing(request):
 
 @login_required
 def generate_key(request):
-    """Generate a bookmarklet key to hand out"""
+    """This is where an org admin goes to invite collaborators"""
 
     org = Organization.objects.get(user=request.user)
     displayKey = None

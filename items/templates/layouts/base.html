@@ -1,6 +1,7 @@
 {% load static from staticfiles %}
 {% load compress %}
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,38 +19,36 @@
 
   <!-- FONT
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  {% comment %} TODO: we don't use all these fonts. cleanup. {% endcomment %}
-  <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700' rel='stylesheet' type='text/css'>
+  <link href='//fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
 
   <!-- CSS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  {% block styles %}
     <link href="{% static 'css/normalize.css' %}" media="screen, print" rel="stylesheet">
     <link href="{% static 'css/skeleton.css' %}" media="screen, print" rel="stylesheet">
-    
-  {% endblock styles %}
+  {% block styles %}{% endblock styles %}
 
   {% compress css %}
     <link rel="stylesheet" type="text/x-scss" href="{% static "css/style.scss" %}" />
   {% endcompress %}
 
+  <!-- Scripts
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="icon" href="{% static 'img/favicon.png' %}">
+  <link rel="icon" href="{% static 'img/favicon.ico' %}">
 
 </head>
 <body>
 
-  <!-- Primary Page Layout
+  <!-- Content
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-	{% block content %}{% endblock content %}
-    <script src="{% static 'js/jquery-1.11.1.min.js' %}"></script>
-    {% block scripts %}{% endblock scripts %}
+{% block content %}{% endblock content %}
 
+<script src="{% static 'js/jquery-1.11.1.min.js' %}"></script>
+{% block scripts %}{% endblock scripts %}
 <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  
 </body>
 </html>

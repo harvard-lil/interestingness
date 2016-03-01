@@ -14,15 +14,13 @@ urlpatterns = patterns('items.views',
 
     # Common Pages
     url(r'^$', 'common.landing', name='common_landing'),
-    url(r'^add-item?$', 'common.add_item', name='add_item'),
+    url(r'^add-item/?$', 'common.add_item', name='add_item'),
     url(r'^add-item-service/?$', 'common.add_item_service', name='add_item_service'),
-    url(r'^collaborator/(?P<bookmarklet_key_id>[a-zA-Z0-9\-]+)/$', 'common.collaborator', name='common_collaborator'),
-    url(r'^collaborator/(?P<bookmarklet_key_id>[a-zA-Z0-9\-]+)/confirm/$', 'common.collaborator_confirm', name='common_collaborator_confirm'),
-    url(r'^bookmarklet/(?P<bookmarklet_key>[a-zA-Z0-9\-]+)/$', 'common.bookmarklet', name='common_bookmarklet'),
+    url(r'^collaborator/(?P<bookmarklet_key_id>[a-zA-Z0-9\-]+)/?$', 'common.collaborator', name='common_collaborator'),
     
     # Organization Pages
-    url(r'^dashboard/$', 'dashboard.landing', name='dashboard_landing'),
-    url(r'^dashboard/generate-key/$', 'dashboard.generate_key', name='dashboard_generate_key'),
+    url(r'^dashboard/?$', 'dashboard.landing', name='dashboard_landing'),
+    url(r'^dashboard/generate-key/?$', 'dashboard.generate_key', name='dashboard_generate_key'),
     
      # Session/account management
     url(r'^password/change/?$', auth_views.password_change, {'template_name': 'registration/password_change_form.html'}, name='auth_password_change'),
@@ -46,5 +44,5 @@ urlpatterns = patterns('items.views',
     (r'^api/v0.2/', include(item_resource.urls)),
     
     # List of user links
-    url(r'^(?P<slug>[a-zA-Z-]+)/?$', 'dashboard.display_items', name='dashboard_display_items'),   
+    url(r'^(?P<slug>[a-zA-Z-]+)/?$', 'dashboard.display_items', name='dashboard_display_items'),
 )
