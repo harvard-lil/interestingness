@@ -1,0 +1,323 @@
+/* ########################## */
+/* #   Landing (not authed)   */
+/* ########################## */
+
+.title-bar {
+  width: 100px;
+  height: 20px;
+  position:absolute;
+  top:50%;
+  left:50%;
+  margin-left:-270px;/* half width*/
+  margin-top:-200px;/* half height*/
+}
+
+.title-bar p {
+  -webkit-transform: skew(-20deg);
+  -moz-transform: skew(-20deg);
+  -o-transform: skew(-20deg);
+}
+
+.title-bar p span{
+  font-size: 80px;
+  background: #09f;
+  padding: 10px 40px;
+  color: #fff;
+}
+
+/* ########################## */
+/* # / Landing (not authed)   */
+/* ########################## */
+
+
+/* ########################## */
+/* # Collaborator page        */
+/* ########################## */
+
+.collaborator {
+
+	max-width: 500px;
+
+}
+
+.collaborator img {
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	display: block;
+	margin: auto;
+	cursor: pointer;
+}
+
+.collaborator label.upload-label {
+	width: 100%;
+}
+
+.collaborator label.upload-label input[type="file"] {
+    position: fixed;
+    top: -1000px;
+}
+
+.collaborator .upload-pic-button {
+	border-radius: 2px;
+	display: block;
+	width: 100%;
+	margin: 55px auto 0 auto;
+	padding: 5px 13px;
+	border: 1px solid #54ace8;;
+	cursor: pointer;
+	font-weight: 400;
+	text-align: center;
+}
+
+.collaborator input {
+	margin: 10px 0;
+	width: 100%;
+	border: 1px solid #ccc;
+	border-radius: 2px;
+	padding: 5px 13px;
+}
+
+.collaborator input[type="submit"] {
+	border: 1px solid #54ace8;
+	background-color: #fff;
+	border-radius: 2px;
+}
+
+.collaborator .field-label {
+	float: right;
+}
+
+.collaborator .pic-status, .name-status {
+	display: none;
+	color: #54ace8;
+	text-align: center;
+	font-size: 15px;
+}
+
+.collaborator .name-email-row, picture-row {
+	margin-top: 50px;
+}
+
+.collaborator .picture-row {
+	margin-top: 50px;
+}
+
+.collaborator .title {
+	text-align: center;
+	margin-top: 20px;
+	font-size: 37px;
+	color: #555;
+}
+
+.collaborator .intro-text {
+	text-align: center;
+	font-size: 14px;
+}
+
+.collaborator .bookmarklet-install-button {
+	display: none;
+	margin-top: 50px;
+}
+
+/* ########################## */
+/* # / Collaborator page      */
+/* ########################## */
+
+
+/* ########################## */
+/* # some old stuff that      */
+/* # should be organized      */
+/* ########################## */
+
+.tray {
+background-color:#fff;
+background-image: radial-gradient(#eaf5fc 21%, transparent 26%),
+radial-gradient(#eaf5fc 21%, transparent 26%);
+background-size:30px 30px;
+background-position: 0 0, 15px 15px;
+}
+
+.tray #signal-success {
+	margin-left:0px;
+	font-size:1.5rem;
+	padding:7px 0px 4px 0px;
+	color: #58c361;
+	font-weight:bold;
+	text-align:center;
+	text-shadow:
+   -1px -1px 0 #fff,  
+    1px -1px 0 #fff,
+    -1px 1px 0 #fff,
+     1px 1px 0 #fff;
+}
+
+.items-page .post-padding, .tray .post-padding {
+  margin-bottom: 20px;
+}
+.items-page .crop-mug, .tray .crop-mug {
+  width: 65px;
+  height: 65px;
+  position: relative;
+  overflow: hidden;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+}
+.items-page img, .tray img {
+  display: inline;
+  margin: 0 auto;
+  height: 100%;
+  width: auto;
+}
+.items-page h4, .tray h4 {
+  font-size: 1.9rem;
+  line-height: 1.4;
+  letter-spacing: 0;
+  font-style: italic;
+  margin-top: -5px;
+}
+.items-page p.source, .items-page p.source a, .tray p.source, .tray p.source a {
+  margin-top: -15px;
+  font-size: 1.2rem;
+  color: black;
+  /*/border:1px dashed #ccc;/*/
+  opacity: 50%;
+  text-decoration: none;
+}
+.items-page p.tray-source, .tray p.tray-source {
+  padding: 4px 0px 4px 10px;
+  background-color: #fff;
+}
+.items-page textarea,
+.items-page #description,
+.items-page .button.button-primary,
+.items-page button.button-primary,
+.items-page input[type="submit"].button-primary,
+.items-page input[type="reset"].button-primary,
+.items-page input[type="button"].button-primary, .tray textarea,
+.tray #description,
+.tray .button.button-primary,
+.tray button.button-primary,
+.tray input[type="submit"].button-primary,
+.tray input[type="reset"].button-primary,
+.tray input[type="button"].button-primary {
+  border-color: white;
+  border-radius: 0px;
+  color: #000;
+  background-color: #fff;
+}
+.items-page textarea, .items-page #description, .tray textarea, .tray #description {
+  font-size: 1.9rem;
+  line-height: 1.4;
+  letter-spacing: 0;
+  font-style: italic;
+  font-weight: 300;
+  min-height: 35px;
+  margin-top: 0px;
+}
+.items-page input[type="submit"].button-primary, .tray input[type="submit"].button-primary {
+  font-family: 'Open Sans Condensed';
+  font-size: 12px;
+  margin-bottom: 0px;
+}
+.items-page .shadow, .tray .shadow {
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+  -ms-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+  -o-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+}
+.items-page .text-background, .tray .text-background {
+  background-color: #fff;
+  padding: 0px 4px 4px 6px;
+  width: 76px;
+  height: 24px;
+  margin: 5px 0px 0px -11px;
+  font-family: 'Open Sans Condensed';
+}
+.items-page input, .tray input {
+  margin-top: 5px;
+}
+.items-page .label-body, .tray .label-body {
+  display: inline-block;
+  font-weight: normal;
+  font-size: 11px;
+}
+.items-page .posted-by, .tray .posted-by {
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding-left: 5px;
+  font-family: 'Open Sans Condensed';
+  text-transform: uppercase;
+}
+.items-page .tray, .tray .tray {
+  /*/background-image: url(images/polka-dot-red.gif); /*/
+  background-image: url("../images/polka-dot.png");
+  margin-bottom: 20px;
+}
+.items-page .tray-row-correction, .tray .tray-row-correction {
+  margin-bottom: -15px;
+}
+.items-page .column-adjustment, .tray .column-adjustment {
+  margin-left: 20px;
+}
+.items-page h1, .tray h1 {
+  /*/background: linear-gradient(180deg, #e05252 0%, #99e052 25%, #52e0e0 50%, #9952e0 75%, #e05252 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;/*/
+  background-color: #33C3F0;
+  color: white;
+  font-weight: bold;
+  padding: 3px 30px 4px 14px;
+  text-align: left;
+  font-family: "Open Sans Condensed";
+}
+.items-page .skew, .tray .skew {
+  -webkit-transform: skew(-20deg);
+  -moz-transform: skew(-20deg);
+  -ms-transform: skew(-20deg);
+  -o-transform: skew(-20deg);
+  transform: skew(-20deg);
+}
+.items-page ::-webkit-input-placeholder, .tray ::-webkit-input-placeholder {
+  font-size: 1.9rem;
+  line-height: 1.4;
+  letter-spacing: 0;
+  font-style: italic;
+  color: #b3b3b3;
+  font-weight: 300;
+}
+.items-page :-moz-placeholder, .tray :-moz-placeholder {
+  /* older Firefox*/
+  font-size: 1.9rem;
+  line-height: 1.4;
+  letter-spacing: 0;
+  font-style: italic;
+  color: #ccc;
+  font-weight: 300;
+}
+.items-page ::-moz-placeholder, .tray ::-moz-placeholder {
+  /* Firefox 19+ */
+  font-size: 1.9rem;
+  line-height: 1.4;
+  letter-spacing: 0;
+  font-style: italic;
+  color: #ccc;
+  font-weight: 300;
+}
+.items-page :-ms-input-placeholder, .tray :-ms-input-placeholder {
+  font-size: 1.9rem;
+  line-height: 1.4;
+  letter-spacing: 0;
+  font-style: italic;
+  color: #ccc;
+  font-weight: 300;
+}
+
+/* ########################## */
+/* # / some old stuff that    */
+/* # / should be organized    */
+/* ########################## */

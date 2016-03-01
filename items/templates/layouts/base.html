@@ -1,6 +1,4 @@
 {% load static from staticfiles %}
-{% load compress %}
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -25,11 +23,9 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <link href="{% static 'css/normalize.css' %}" media="screen, print" rel="stylesheet">
     <link href="{% static 'css/skeleton.css' %}" media="screen, print" rel="stylesheet">
+    <link href="{% static 'css/style.css' %}" media="screen, print" rel="stylesheet">
   {% block styles %}{% endblock styles %}
 
-  {% compress css %}
-    <link rel="stylesheet" type="text/x-scss" href="{% static "css/style.scss" %}" />
-  {% endcompress %}
 
   <!-- Scripts
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->

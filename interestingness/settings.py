@@ -21,7 +21,6 @@ INSTALLED_APPS = (
     'django_forms_bootstrap',
     'items',
     'tastypie',
-    'compressor',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -119,12 +118,6 @@ STATICFILES_DIRS = (
 # https://warehouse.python.org/project/whitenoise/
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
-STATICFILES_FINDERS = (
-    'django.contrib.staticfiles.finders.FileSystemFinder',
-    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
-    'compressor.finders.CompressorFinder',
-)
-
 AUTH_USER_MODEL = 'items.InterUser'
 
 LOGIN_URL = '/login/'
@@ -135,9 +128,5 @@ TASTYPIE_DEFAULT_FORMATS = ['json', 'jsonp']
 DEFAULT_FROM_EMAIL = 'Interestingness <info@interestingness.org>'
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-
-COMPRESS_PRECOMPILERS = (
-    ('text/x-scss', 'django_libsass.SassCompiler'),
-)
 
 from .local import *
