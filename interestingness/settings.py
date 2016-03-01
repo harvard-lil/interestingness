@@ -10,8 +10,6 @@ SECRET_KEY = ''
 
 DEBUG = False
 
-# Application definition
-
 INSTALLED_APPS = (
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -114,6 +112,14 @@ STATICFILES_DIRS = (
     os.path.join(PROJECT_ROOT, 'static'),
 )
 
+# List of finder classes that know how to find static files in
+# various locations.
+STATICFILES_FINDERS = (
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+#    'django.contrib.staticfiles.finders.DefaultStorageFinder',
+)
+
 # Simplified static file serving.
 # https://warehouse.python.org/project/whitenoise/
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
@@ -129,4 +135,5 @@ DEFAULT_FROM_EMAIL = 'Interestingness <info@interestingness.org>'
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
-from .local import *
+if not 'DJANGO_SECRET_KEY' in os.environ:
+    from .local import *
