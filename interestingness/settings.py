@@ -6,17 +6,12 @@ import dj_database_url
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 
-SECRET_KEY = ''
-
-DEBUG = False
-
 INSTALLED_APPS = (
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'django_forms_bootstrap',
     'items',
     'tastypie',
 )
@@ -46,23 +41,13 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.media',
             ],
         },
     },
 ]
 
 WSGI_APPLICATION = 'interestingness.wsgi.application'
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'inter',
-        'USER': 'inter',
-        'PASSWORD': 'inter',
-        'HOST': 'localhost',
-        'PORT': '',
-    }
-}
 
 # Password validation
 # https://docs.djangoproject.com/en/1.9/ref/settings/#auth-password-validators
@@ -92,20 +77,22 @@ USE_TZ = True
 
 
 # Update database configuration with $DATABASE_URL.
-db_from_env = dj_database_url.config(conn_max_age=500)
-DATABASES['default'].update(db_from_env)
+DATABASES = {'default': dj_database_url.config()}
 
 # Honor the 'X-Forwarded-Proto' header for request.is_secure()
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 # Allow all host headers
-ALLOWED_HOSTS = ['interestingness.org']
+ALLOWED_HOSTS = ['*']
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
 STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
 STATIC_URL = '/static/'
+
+MEDIA_ROOT = os.path.join(PROJECT_ROOT, 'mediafiles')
+MEDIA_URL = "/media/"
 
 # Extra places for collectstatic to find static files.
 STATICFILES_DIRS = (
@@ -135,5 +122,12 @@ DEFAULT_FROM_EMAIL = 'Interestingness <info@interestingness.org>'
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
-if not 'DJANGO_SECRET_KEY' in os.environ:
-    from .local import *
+try:
+  from .local import *
+except Exception as e:
+    # We must be in our Heroku env. set our required Heroku vars
+    SECRET_KEY = os.environ['SECRET_KEY']
+    DEBUG = True
+    EMAIL_BACKEND = "sgbackend.SendGridBackend"
+    SENDGRID_PASSWORD = os.environ['SENDGRID_PASSWORD']
+    SENDGRID_USER = os.environ['SENDGRID_USERNAME']

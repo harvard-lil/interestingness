@@ -1,11 +1,17 @@
 {% extends "layouts/base.html" %}
+{% load static from staticfiles %}
 
 {% block title %}Interestingness{% endblock title %}
 
 
 {% block content %}
 
- <h1>Interestingness</h1>
- <p>you've found the landing page</p>
-
+<div  class="title-bar">
+	<p><span>interestingness</span></p>
+</div>
 {% endblock content %}
+
+{% block scripts %}
+<script language="javascript" type="text/javascript" src="{% static 'js/p5.min.js' %}"></script>
+<script language="javascript" type="text/javascript" src="{% static 'js/sketch.js' %}"></script>
+{% endblock scripts %}

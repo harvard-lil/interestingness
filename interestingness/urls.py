@@ -45,4 +45,4 @@ urlpatterns = patterns('items.views',
     
     # List of user links
     url(r'^(?P<slug>[a-zA-Z-]+)/?$', 'dashboard.display_items', name='dashboard_display_items'),
-)
+) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

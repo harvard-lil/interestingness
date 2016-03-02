@@ -254,8 +254,6 @@ background-position: 0 0, 15px 15px;
   text-transform: uppercase;
 }
 .items-page .tray, .tray .tray {
-  /*/background-image: url(images/polka-dot-red.gif); /*/
-  background-image: url("../images/polka-dot.png");
   margin-bottom: 20px;
 }
 .items-page .tray-row-correction, .tray .tray-row-correction {
